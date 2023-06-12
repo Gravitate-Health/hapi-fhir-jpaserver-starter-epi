@@ -9,8 +9,8 @@ image:
   #repository: hapiproject/fhir
   repository: hapi-fhir-epi
   # -- defaults to `Chart.appVersion`. As of v5.7.0, this is the `distroless` flavor
-  #tag: "v6.6.0"
-  tag: "0.0.12" #V6.6.0 does not work in R5. This versions stays until bug is fixed.
+  tag: "v6.6.0"
+  #tag: "0.0.12" #V6.6.0 does not work in R5. This versions stays until bug is fixed.
   # -- image pullPolicy to use
   pullPolicy: Always
 
