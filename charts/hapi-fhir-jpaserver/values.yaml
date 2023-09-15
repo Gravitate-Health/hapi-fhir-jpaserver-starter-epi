@@ -173,9 +173,8 @@ externalDatabase:
 
 # -- extra environment variables to set on the server container
 extraEnv:
-  []
-  # - name: SPRING_FLYWAY_BASELINE_ON_MIGRATE
-  #   value: "true"
+  - name: SERVER_SERVLET_CONTEXT_PATH 
+    value: "epi/api"
 
 podDisruptionBudget:
   # -- Enable PodDisruptionBudget for the server pods.
