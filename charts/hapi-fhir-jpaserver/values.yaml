@@ -111,7 +111,7 @@ postgresql:
   # -- enable an included PostgreSQL DB.
   # see <https://github.com/bitnami/charts/tree/master/bitnami/postgresql> for details
   # if set to `false`, the values under `externalDatabase` are used
-  enabled: true
+  enabled: false
   auth:
     # -- name for a custom database to create
     database: "fhir"
@@ -157,15 +157,15 @@ livenessProbe:
 
 externalDatabase:
   # -- external database host used with `postgresql.enabled=false`
-  host: hapi-fhir-jpaserver-epi-postgresql
+  host: postgresql-fhir-epi
   # -- database port number
   port: 5432
   # -- username for the external database
-  user: postgres
+  user: admin
   # -- database password
   password: ""
   # -- name of an existing secret resource containing the DB password in the `existingSecretKey` key
-  existingSecret: "hapi-fhir-jpaserver-epi-postgresql"
+  existingSecret: "postgresql-fhir-epi"
   # -- name of the key inside the `existingSecret`
   existingSecretKey: "postgres-password"
   # -- database name
@@ -174,7 +174,7 @@ externalDatabase:
 # -- extra environment variables to set on the server container
 extraEnv:
   - name: SERVER_SERVLET_CONTEXT_PATH 
-    value: "epi/api"
+    value: "/epi/api"
 
 podDisruptionBudget:
   # -- Enable PodDisruptionBudget for the server pods.
