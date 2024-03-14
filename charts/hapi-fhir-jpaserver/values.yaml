@@ -10,7 +10,7 @@ image:
   repository: hapi-fhir-epi
   # -- defaults to `Chart.appVersion`. As of v5.7.0, this is the `distroless` flavor
   #tag: "v6.6.0"
-  tag: v6.10.1
+  tag: v7.0.2
   #tag: "0.0.12" #V6.6.0 does not work in R5. This versions stays until bug is fixed.
   # -- image pullPolicy to use
   pullPolicy: Always
@@ -134,13 +134,6 @@ readinessProbe:
   periodSeconds: 20
   successThreshold: 1
   timeoutSeconds: 20
-
-startupProbe:
-  failureThreshold: 10
-  initialDelaySeconds: 30
-  periodSeconds: 30
-  successThreshold: 1
-  timeoutSeconds: 30
 
 livenessProbe:
   failureThreshold: 5

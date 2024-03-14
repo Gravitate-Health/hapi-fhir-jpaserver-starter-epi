@@ -12,7 +12,7 @@ management:
 spring:
   main:
     allow-circular-references: true
-    #allow-bean-definition-overriding: true
+    allow-bean-definition-overriding: true
   flyway:
     enabled: false
     baselineOnMigrate: true
@@ -126,7 +126,7 @@ hapi:
     advanced_lucene_indexing: false
     bulk_export_enabled: false
     bulk_import_enabled: false
-    #    language_search_parameter_enabled: true
+    language_search_parameter_enabled: true
     #    enforce_referential_integrity_on_delete: false
     # This is an experimental feature, and does not fully support _total and other FHIR features.
     #    enforce_referential_integrity_on_delete: false
