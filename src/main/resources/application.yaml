@@ -138,7 +138,7 @@ hapi:
     #    fhirpath_interceptor_enabled: false
     #    filter_search_enabled: true
     #    graphql_enabled: true
-    narrative_enabled: false
+    narrative_enabled: true
     mdm_enabled: false
     mdm_rules_json_location: "mdm-rules.json"
     #    local_base_urls:
